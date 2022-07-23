@@ -1,0 +1,24 @@
+{
+  "name": "maze3d-world",
+  "homepage": "https://github.com/michaelnicol/maze3d-world/blob/main/README.md",
+  "bugs": {
+    "url" : "https://github.com/michaelnicol/maze3d-world/issues",
+    "email" : "michaelnicol71@gmail.com"
+  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "maze3d": "^3.0.1",
+    "three": "^0.142.0"
+  }
+}

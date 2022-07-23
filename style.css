@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
