@@ -42,9 +42,9 @@ export default class WorldTemplate {
     const ref = this;
     // Basic scene setup
     this._volLimit = 2000;
-    this._maxX = 100;
-    this._maxY = 100;
-    this._maxZ = 100;
+    this._maxX = 300;
+    this._maxY = 300;
+    this._maxZ = 300;
     this._container = container;
     this._scene = new three.Scene();
     this._renderer = this._createRenderer();
@@ -431,7 +431,7 @@ export default class WorldTemplate {
     };
     const mazeSize = this._GUI.addFolder("Maze Size");
     mazeSize
-      .add(this._clientMaze.constraints, "width", 1, 100, 1)
+      .add(this._clientMaze.constraints, "width", 1, this._maxX, 1)
       .listen()
       .onChange(() => {
         this._completeModelLoadFromTemplate();
@@ -442,7 +442,7 @@ export default class WorldTemplate {
         this._updateBackDrop();
       });
     mazeSize
-      .add(this._clientMaze.constraints, "height", 1, 100, 1)
+      .add(this._clientMaze.constraints, "height", 1, this._maxY, 1)
       .listen()
       .onChange(() => {
         this._completeModelLoadFromTemplate();
@@ -453,7 +453,7 @@ export default class WorldTemplate {
         this._updateBackDrop();
       });
     mazeSize
-      .add(this._clientMaze.constraints, "depth", 1, 100, 1)
+      .add(this._clientMaze.constraints, "depth", 1, this._maxZ, 1)
       .listen()
       .onChange(() => {
         this._completeModelLoadFromTemplate();
@@ -1295,7 +1295,7 @@ export default class WorldTemplate {
     /* Animation Functions Folder */
 
     animationFolder
-      .add(this._guiAnimationMixerSettings, "timeScale", 0.1, 10, 0.1)
+      .add(this._guiAnimationMixerSettings, "timeScale", 0.1, 30, 0.1)
       .listen()
       .onChange(() => {
         this._clientMaze.animationMixersAPI(
